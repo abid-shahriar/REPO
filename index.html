@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"
+      defer
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <div class="currentSong">
+          <p>Default Song</p>
+        </div>
+        <div class="controls">
+          <div class="musicPlayer">
+            <audio id="player" ontimeupdate="updateProgress()">
+              <source id="source" src="./songs/Egiye-De.mp3" />
+            </audio>
+          </div>
+          <div class="icons">
+            <div class="playPause">
+              <i onclick="playAudio()" class="far fa-play-circle fa-5x"></i>
+              <i onclick="pauseAudio()" class="far fa-pause-circle fa-5x"></i>
+            </div>
+            <div class="volume">
+              <span>Volume:</span>
+              <input
+                id="volumeSlider"
+                type="range"
+                min="0"
+                max="1"
+                step=".01"
+              />
+            </div>
+            <div class="progress">
+              <progress id="progressBar" value="" max="100"></progress>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="songList">
+          <ol id="allSongs"></ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flexbox($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(78, 122, 78);
+  @include flexbox();
+}
+
+.wrapper {
+  height: 90vh;
+  width: 60vmin;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
+  border-radius: 10px;
+  @include flexbox(column);
+  padding: 1rem;
+}
+
+.top {
+  height: 50%;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+  .currentSong {
+    margin: 3rem 0;
+    width: 100%;
+    p {
+      font-size: 1.6rem;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .controls {
+    @include flexbox();
+    width: 100%;
+    // border: 1px solid red;
+
+    .icons {
+      width: 100%;
+      @include flexbox(column);
+      & svg {
+        margin: 0 1rem;
+        font-size: 8rem;
+        cursor: pointer;
+      }
+
+      .volume {
+        @include flexbox();
+        margin: 2rem 0;
+
+        span {
+          font-size: 1.6rem;
+        }
+
+        input {
+          margin: 0 1rem;
+        }
+      }
+    }
+
+    .progress {
+      width: 100%;
+
+      progress {
+        width: 100%;
+        // background-color: rgba(0, 0, 0, 0.199);
+        // border-radius: 50%;
+        appearance: none;
+
+        &::-webkit-progress-bar {
+          background-color: rgba(0, 0, 0, 0.192);
+          border-radius: 50px;
+          overflow: hidden;
+        }
+        &::-webkit-progress-value {
+          background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.315),
+            rgba(0, 0, 0, 0.781)
+          );
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  height: 50%;
+  width: 100%;
+
+  .songList {
+    @include flexbox();
+    width: 100%;
+    ol {
+      @include flexbox(column);
+      list-style: none;
+      text-align: center;
+      margin-left: 2rem;
+      width: 100%;
+
+      li {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0.5rem 0;
+        width: 100%;
+        cursor: pointer;
+        color: #ddd;
+        transition: 0.2s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

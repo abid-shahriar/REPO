@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #4e7a4e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.wrapper {
+  height: 90vh;
+  width: 60vmin;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+.top {
+  height: 50%;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.top .currentSong {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.top .currentSong p {
+  font-size: 1.6rem;
+  color: white;
+  text-align: center;
+}
+
+.top .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.top .controls .icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top .controls .icons svg {
+  margin: 0 1rem;
+  font-size: 8rem;
+  cursor: pointer;
+}
+
+.top .controls .icons .volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 2rem 0;
+}
+
+.top .controls .icons .volume span {
+  font-size: 1.6rem;
+}
+
+.top .controls .icons .volume input {
+  margin: 0 1rem;
+}
+
+.top .controls .progress {
+  width: 100%;
+}
+
+.top .controls .progress progress {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.top .controls .progress progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.top .controls .progress progress::-webkit-progress-value {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.315)), to(rgba(0, 0, 0, 0.781)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.781));
+}
+
+.bottom {
+  height: 50%;
+  width: 100%;
+}
+
+.bottom .songList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.bottom .songList ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  text-align: center;
+  margin-left: 2rem;
+  width: 100%;
+}
+
+.bottom .songList ol li {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  cursor: pointer;
+  color: #ddd;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.bottom .songList ol li:hover {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
